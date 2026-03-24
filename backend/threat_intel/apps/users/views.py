@@ -1,34 +1,40 @@
-# apps/users/serializers.py
+# apps/users/views.py
 
-from rest_framework import serializers
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework import status
+
 from .models import CustomUser
-from django.contrib.auth.password_validation import validate_password
+from .serializers import RegisterSerializer, UserSerializer
 
 
-class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
+class RegisterView(APIView):
+    def post(self, request):
+        serializer = RegisterSerializer(data=request.data)
 
-    class Meta:
-        model = CustomUser
-        fields = [
-            "id",
-            "username",
-            "email",
-            "password",
-            "role",
-            "organization"
-        ]
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                {"message": "User registered successfully"},
+                status=status.HTTP_201_CREATED
+            )
 
-    def create(self, validated_data):
-        password = validated_data.pop("password")
-        user = CustomUser(**validated_data)
-        user.set_password(password)
-        user.save()
-        return user
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CustomUser
-        fields = "__all__"
-        read_only_fields = ["password"]
+class ProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)
+
+
+class UserListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        users = CustomUser.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data)

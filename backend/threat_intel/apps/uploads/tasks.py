@@ -21,6 +21,7 @@ def process_file(self, upload_id, analysis_id):
 
         # IOC Extraction
         iocs = extract_iocs(content)
+        file.seek(0)  # Reset file pointer after reading
 
         # (Optional) You can save IOCs later when IOC module is fully ready
 

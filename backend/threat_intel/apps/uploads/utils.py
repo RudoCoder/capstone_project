@@ -1,40 +1,39 @@
 # apps/uploads/utils.py
+
+import hashlib
 import re
-from apps.analysis.models import AnalysisResult
-from apps.ioc.models import IOC, ExtractedIOC
 
-def extract_iocs(content):
-    ip_pattern = r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b'
-    urls = re.findall(r'https?://\S+', content)
-    ips = re.findall(ip_pattern, content)
+def calculate_hash(file):
+    """
+    Calculate SHA256 hash of uploaded file
+    """
+    sha256 = hashlib.sha256()
 
-    return {"ips": ips, "urls": urls}
+    for chunk in file.chunks():
+        sha256.update(chunk)
 
-def handle_file_upload(upload_id, analysis_id):
-    analysis = AnalysisResult.objects.get(id=analysis_id)
-    analysis.status = "processing"
-    analysis.save()
+    return sha256.hexdigest()
+def extract_iocs(file):
+    """
+    Extract basic IOCs (Indicators of Compromise)
+    from file content.
+    """
 
-    file_path = analysis.upload.file.path
+    content = file.read().decode(errors="ignore")
 
-    with open(file_path, 'r', errors='ignore') as f:
-        content = f.read()
+    iocs = {
+        "ips": [],
+        "domains": [],
+        "emails": [],
+    }
 
-    # IOC Extraction
-    iocs = extract_iocs(content)
+    # Regex patterns
+    ip_pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
+    domain_pattern = r"\b(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}\b"
+    email_pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
 
-    for ip in iocs["ips"]:
-        ioc_obj, _ = IOC.objects.get_or_create(type="ip", value=ip)
-        ExtractedIOC.objects.create(analysis=analysis, ioc=ioc_obj)
+    iocs["ips"] = re.findall(ip_pattern, content)
+    iocs["domains"] = re.findall(domain_pattern, content)
+    iocs["emails"] = re.findall(email_pattern, content)
 
-    # YARA Scan
-    run_yara_scan(content, analysis)
-
-    # CVE Matching
-    match_cves(content, analysis)
-
-    # Risk Scoring
-    calculate_risk(analysis)
-
-    analysis.status = "completed"
-    analysis.save()
+    return iocs

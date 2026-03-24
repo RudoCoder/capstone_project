@@ -1,14 +1,8 @@
 # apps/analysis/urls.py
 
 from django.urls import path
-from .views import (
-    AnalysisDetailView,
-    AnalysisListView,
-    RiskTrendView,
-)
+from .views import AnalysisDetailView
 
 urlpatterns = [
-    path("", AnalysisListView.as_view()),
-    path("<int:pk>/", AnalysisDetailView.as_view()),
-    path("risk-trends/", RiskTrendView.as_view()),
+    path("<int:id>/", AnalysisDetailView.as_view(), name="analysis-detail"),
 ]

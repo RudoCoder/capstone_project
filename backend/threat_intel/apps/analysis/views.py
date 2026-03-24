@@ -2,8 +2,21 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Upload
 from apps.analysis.models import AnalysisResult
-from .tasks import process_file
-from .utils import calculate_hash
+from apps.uploads.tasks import process_file
+from .utils import calculate_risk
+from rest_framework.generics import RetrieveAPIView
+from .models import AnalysisResult
+from .serializers import AnalysisResultSerializer
+
+
+class AnalysisDetailView(RetrieveAPIView):
+    """
+    Retrieve detailed analysis for a specific upload
+    """
+    queryset = AnalysisResult.objects.all()
+    serializer_class = AnalysisResultSerializer
+    lookup_field = "id"
+
 
 class UploadView(APIView):
     def post(self, request):

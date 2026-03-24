@@ -1,40 +1,11 @@
-# apps/users/views.py
 
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-from rest_framework import status
+# apps/users/urls.py
 
-from .models import CustomUser
-from .serializers import RegisterSerializer, UserSerializer
+from django.urls import path
+from .views import RegisterView, ProfileView, UserListView
 
-
-class RegisterView(APIView):
-    def post(self, request):
-        serializer = RegisterSerializer(data=request.data)
-
-        if serializer.is_valid():
-            serializer.save()
-            return Response(
-                {"message": "User registered successfully"},
-                status=status.HTTP_201_CREATED
-            )
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class ProfileView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        serializer = UserSerializer(request.user)
-        return Response(serializer.data)
-
-
-class UserListView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        users = CustomUser.objects.all()
-        serializer = UserSerializer(users, many=True)
-        return Response(serializer.data)
+urlpatterns = [
+    path("register/", RegisterView.as_view(), name="register"),
+    path("profile/", ProfileView.as_view(), name="profile"),
+    path("", UserListView.as_view(), name="user-list"),
+]

@@ -1,27 +1,8 @@
-iocs = extract_iocs(content)
+from django.urls import path
+from .views import IOCListView, AnalysisIOCView, IOCOxtractionView
 
-for ip in iocs.get("ips", []):
-    ioc_obj, _ = IOC.objects.get_or_create(
-        type="ip",
-        value=ip,
-        defaults={"source": "extracted"}
-    )
-
-    ExtractedIOC.objects.create(
-        analysis=analysis,
-        ioc=ioc_obj,
-        confidence_score=0.8
-    )
-
-for url in iocs.get("urls", []):
-    ioc_obj, _ = IOC.objects.get_or_create(
-        type="url",
-        value=url,
-        defaults={"source": "extracted"}
-    )
-
-    ExtractedIOC.objects.create(
-        analysis=analysis,
-        ioc=ioc_obj,
-        confidence_score=0.8
-    )
+urlpatterns = [
+    path('', IOCListView.as_view(), name='ioc-list'),
+    path('analysis/<int:analysis_id>/', AnalysisIOCView.as_view(), name='analysis-iocs'),
+    path('extract/', IOCOxtractionView.as_view(), name='extract-iocs'), # New route
+]

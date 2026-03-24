@@ -1,10 +1,11 @@
-# apps/users/urls.py
+# apps/users/admin.py
 
-from django.urls import path
-from .views import RegisterView, ProfileView, UserListView
+from django.contrib import admin
+from .models import CustomUser
 
-urlpatterns = [
-    path("register/", RegisterView.as_view(), name="register"),
-    path("profile/", ProfileView.as_view(), name="profile"),
-    path("", UserListView.as_view(), name="user-list"),
-]
+
+@admin.register(CustomUser)
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = ("username", "email", "role", "organization")
+    search_fields = ("username", "email")
+    list_filter = ("role",)

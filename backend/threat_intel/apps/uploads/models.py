@@ -1,9 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings  # Updated
 
-# Create your models here.
 class Upload(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # Updated to use settings.AUTH_USER_MODEL
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE
+    )
     file = models.FileField(upload_to='uploads/')
     file_name = models.CharField(max_length=255)
     file_type = models.CharField(max_length=50)
