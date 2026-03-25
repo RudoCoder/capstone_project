@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
-import API from "../api/axios";
 import { useParams } from "react-router-dom";
+
+import { getAnalysisById } from "../api/analysisService";
+import { getIOCsByAnalysis } from "../api/iocService";
+import { getYaraMatches } from "../api/yaraService";
+import { getCVEMatches } from "../api/cveService";
 
 import IOCList from "../components/IOCList";
 import YaraMatches from "../components/YaraMatches";
@@ -16,10 +20,10 @@ export default function AnalysisPage() {
   const [cves, setCves] = useState([]);
 
   useEffect(() => {
-    API.get(`analysis/${id}/`).then((res) => setAnalysis(res.data));
-    API.get(`ioc/analysis/${id}/`).then((res) => setIocs(res.data));
-    API.get(`yara/matches/${id}/`).then((res) => setYara(res.data));
-    API.get(`cve/matches/${id}/`).then((res) => setCves(res.data));
+    getAnalysisById(id).then((res) => setAnalysis(res.data));
+    getIOCsByAnalysis(id).then((res) => setIocs(res.data));
+    getYaraMatches(id).then((res) => setYara(res.data));
+    getCVEMatches(id).then((res) => setCves(res.data));
   }, [id]);
 
   if (!analysis) return <p>Loading...</p>;

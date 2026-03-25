@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import API from "../api/axios";
+import { getTutorials } from "../api/tutorialService";
 import TutorialCard from "../components/TutorialCard";
 
 export default function TutorialsPage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    API.get("tutorials/").then((res) => setData(res.data));
+    getTutorials().then((res) => setData(res.data));
   }, []);
 
   return (
