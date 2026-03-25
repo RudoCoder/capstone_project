@@ -82,3 +82,30 @@ WARNING 2026-03-25 01:01:57,094 log Not Found: /api/yara/
 WARNING 2026-03-25 01:01:57,101 log "GET /api/yara/ HTTP/1.1" 404 4002
 WARNING 2026-03-25 01:03:52,544 log Unauthorized: /api/yara/rules/
 WARNING 2026-03-25 01:03:52,616 log "GET /api/yara/rules/ HTTP/1.1" 401 5100
+INFO 2026-03-25 11:02:28,999 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-25 11:02:40,816 log Not Found: /
+WARNING 2026-03-25 11:02:40,908 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-25 11:02:50,881 log "GET /admin/ HTTP/1.1" 200 16774
+INFO 2026-03-25 11:02:51,095 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,159 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,192 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,250 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,286 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,373 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,389 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,488 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-25 11:02:51,495 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:15,036 log "GET /admin/tutorials/tutorial/add/ HTTP/1.1" 200 19069
+INFO 2026-03-25 11:04:15,591 log "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:15,749 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-03-25 11:04:15,804 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:15,806 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-25 11:04:15,978 log "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:15,980 log "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:15,980 log "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:15,990 log "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:16,090 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-03-25 11:04:16,092 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:16,100 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-03-25 11:04:16,343 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-03-25 11:04:16,501 log "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
