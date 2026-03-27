@@ -197,3 +197,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# --- Machine Learning Configuration ---
+ML_ROOT = os.path.join(BASE_DIR, 'ml')
+ML_MODEL_PATH = os.path.join(ML_ROOT, 'model.pkl')

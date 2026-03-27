@@ -62,3 +62,48 @@ frontend/
 ├── vite.config.js            # (recommended for Vite setup)
 └── README.md
 ```
+
+UPDATED FILE TREE
+```
+frontend/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── logo-cyberguard.svg      # Wolf/Shield logo from your reference
+├── src/
+│   ├── api/                     # Communication Layer
+│   │   ├── axios.js             # Central Axios instance (JWT attached)
+│   │   ├── socket.js            # WebSocket connection for live scans
+│   │   ├── authService.js       # Login/Register API calls
+│   │   └── analysisService.js   # Fetching YARA/CVE match data
+│   ├── components/              # UI Building Blocks
+│   │   ├── Navbar.jsx           # Top navigation with Logout
+│   │   ├── Sidebar.jsx          # Left menu (Dashboard, Upload, etc.)
+│   │   ├── StatCard.jsx         # The "Alerts/Scans/Threats" boxes
+│   │   ├── UploadForm.jsx       # File dropzone logic
+│   │   ├── AnalysisCard.jsx     # Summary card for the feed
+│   │   ├── IOCList.jsx          # Displaying IPs/URLs found
+│   │   ├── YaraMatches.jsx      # Rules triggered from GitHub repo
+│   │   ├── CVEList.jsx          # Linked vulnerabilities
+│   │   ├── RiskIndicator.jsx    # Visual "High/Low" risk gauge
+│   │   ├── TutorialCard.jsx     # Educational content cards
+│   │   └── RiskChart.jsx        # Recharts: Area/Line visualization
+│   ├── pages/                   # Application Screens
+│   │   ├── Dashboard.jsx        # Charts + Live WebSocket feed
+│   │   ├── UploadPage.jsx       # File submission interface
+│   │   ├── AnalysisPage.jsx     # Full deep-dive report (ID-based)
+│   │   ├── TutorialsPage.jsx    # Knowledge base
+│   │   ├── LoginPage.jsx        # Secure access
+│   │   └── RegisterPage.jsx     # User signup (New)
+│   ├── context/
+│   │   └── AuthContext.jsx      # Global JWT & User state
+│   ├── assets/
+│   │   └── index.css            # Tailwind / CyberGuard Theme Colors
+│   ├── routes.jsx               # Protected & Public routing logic
+│   ├── App.jsx                  # Main Layout (Navbar + Sidebar wrapper)
+│   └── main.jsx                 # React Entry Point
+├── package.json
+├── vite.config.js
+├── tailwind.config.js           # Customizing the "SOC" color palette
+└── README.md
+```

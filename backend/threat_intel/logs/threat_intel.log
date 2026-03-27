@@ -109,3 +109,332 @@ INFO 2026-03-25 11:04:16,092 log "GET /static/admin/js/vendor/xregexp/xregexp.js
 INFO 2026-03-25 11:04:16,100 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
 INFO 2026-03-25 11:04:16,343 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
 INFO 2026-03-25 11:04:16,501 log "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:02,069 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-25 14:32:13,499 log Not Found: /
+WARNING 2026-03-25 14:32:13,511 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-25 14:32:58,374 log "GET /admin/ HTTP/1.1" 200 16774
+INFO 2026-03-25 14:32:58,898 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:58,899 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,017 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,052 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,145 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,229 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,252 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,586 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-25 14:32:59,664 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+WARNING 2026-03-25 14:33:08,507 log Not Found: /
+WARNING 2026-03-25 14:33:08,519 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-25 15:25:18,183 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-25 15:25:22,202 log "POST /api/token/ HTTP/1.1" 200 489
+WARNING 2026-03-25 15:25:22,523 log Not Found: /ws/analysis/
+INFO 2026-03-25 15:25:22,542 log "OPTIONS /api/analysis/risk-trends/ HTTP/1.1" 200 0
+WARNING 2026-03-25 15:25:22,667 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-25 15:25:22,710 log Not Found: /api/analysis/risk-trends/
+INFO 2026-03-25 15:25:22,756 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-25 15:25:22,758 basehttp - Broken pipe from ('127.0.0.1', 51120)
+WARNING 2026-03-25 15:25:22,807 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-25 15:25:22,841 log Not Found: /api/analysis/
+WARNING 2026-03-25 15:25:22,863 log "GET /api/analysis/ HTTP/1.1" 404 3733
+INFO 2026-03-25 15:25:39,316 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+INFO 2026-03-25 15:25:39,377 log "GET /api/tutorials/ HTTP/1.1" 200 2
+WARNING 2026-03-25 15:25:49,223 log Not Found: /ws/analysis/
+WARNING 2026-03-25 15:25:49,232 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-25 15:25:51,666 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-25 15:25:51,674 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-25 15:25:51,769 log Not Found: /api/analysis/
+WARNING 2026-03-25 15:25:51,769 log "GET /api/analysis/ HTTP/1.1" 404 3733
+INFO 2026-03-25 15:33:48,223 log "OPTIONS /api/uploads/upload/ HTTP/1.1" 200 0
+ERROR 2026-03-25 15:33:50,106 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-25 15:33:50,137 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-25 15:33:54,117 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-25 15:33:54,117 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-25 15:33:59,225 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-25 15:33:59,227 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-25 15:33:59,247 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-25 15:33:59,247 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-25 15:33:59,599 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-25 15:33:59,635 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+INFO 2026-03-25 15:34:07,224 log "GET /api/tutorials/ HTTP/1.1" 200 2
+WARNING 2026-03-25 15:34:12,714 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-25 15:34:12,724 log Not Found: /api/analysis/
+WARNING 2026-03-25 15:34:12,726 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-25 15:34:12,726 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-25 15:34:12,774 log Not Found: /ws/analysis/
+WARNING 2026-03-25 15:34:12,819 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-25 15:34:24,153 log Not Found: /ws/analysis/
+WARNING 2026-03-25 15:34:24,163 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-25 15:34:24,174 log Not Found: /api/analysis/
+WARNING 2026-03-25 15:34:24,194 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-25 15:34:24,298 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-25 15:34:24,308 log "GET /api/analysis/ HTTP/1.1" 404 3733
+INFO 2026-03-26 14:33:54,914 log "GET /admin/ HTTP/1.1" 200 16774
+INFO 2026-03-26 14:33:58,669 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:33:58,823 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:33:59,005 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:33:59,432 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:33:59,699 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:33:59,974 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:02,006 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:02,197 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:02,461 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:17,549 log "GET /admin/cve/cvematch/add/ HTTP/1.1" 200 20387
+INFO 2026-03-26 14:34:18,029 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,039 log "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,315 log "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,326 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,347 log "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,540 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 14:34:18,833 log "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,833 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:18,945 log "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:19,344 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:19,823 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:26,832 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:26,975 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:27,295 log "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-03-26 14:34:44,967 log "GET /admin/cve/ HTTP/1.1" 200 5962
+INFO 2026-03-26 14:34:48,078 log "GET /admin/ HTTP/1.1" 200 16774
+INFO 2026-03-26 14:42:38,102 log "GET /admin/yara_engine/yaramatch/add/ HTTP/1.1" 200 20492
+INFO 2026-03-26 14:42:38,964 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 14:42:46,669 log "GET /admin/ HTTP/1.1" 200 16774
+INFO 2026-03-26 14:42:49,687 log "GET /admin/yara_engine/yararule/add/ HTTP/1.1" 200 18299
+INFO 2026-03-26 14:42:50,269 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 14:43:29,873 log "GET /admin/ HTTP/1.1" 200 16774
+INFO 2026-03-26 14:43:42,877 log "GET /admin/tutorials/tutorial/add/ HTTP/1.1" 200 19069
+INFO 2026-03-26 14:43:43,409 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 14:46:30,985 log "POST /admin/tutorials/tutorial/add/ HTTP/1.1" 302 0
+INFO 2026-03-26 14:46:31,607 log "GET /admin/tutorials/tutorial/ HTTP/1.1" 200 19606
+INFO 2026-03-26 14:46:32,269 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 14:46:32,949 log "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+INFO 2026-03-26 14:46:33,448 log "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2026-03-26 14:46:33,788 log "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-03-26 14:46:33,912 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+INFO 2026-03-26 14:46:34,109 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+WARNING 2026-03-26 14:46:43,798 log Not Found: /ws/analysis/
+WARNING 2026-03-26 14:46:43,805 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-26 14:46:43,827 log "OPTIONS /api/analysis/risk-trends/ HTTP/1.1" 200 0
+INFO 2026-03-26 14:46:43,928 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+WARNING 2026-03-26 14:47:11,064 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-26 14:47:11,074 log Not Found: /api/analysis/
+WARNING 2026-03-26 14:47:11,095 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-26 14:47:11,156 log Not Found: /ws/analysis/
+WARNING 2026-03-26 14:47:11,166 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-26 14:47:11,166 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-26 14:47:36,385 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+WARNING 2026-03-26 14:47:36,456 log Unauthorized: /api/tutorials/
+WARNING 2026-03-26 14:47:36,487 log "GET /api/tutorials/ HTTP/1.1" 401 172
+INFO 2026-03-26 14:47:59,008 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-26 14:48:02,999 log "POST /api/token/ HTTP/1.1" 200 489
+WARNING 2026-03-26 14:48:03,576 log Not Found: /ws/analysis/
+WARNING 2026-03-26 14:48:03,647 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-26 14:48:03,679 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-26 14:48:03,687 log Not Found: /api/analysis/
+WARNING 2026-03-26 14:48:03,738 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-26 14:48:03,748 log "GET /api/analysis/ HTTP/1.1" 404 3733
+INFO 2026-03-26 14:48:10,497 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-26 14:49:20,557 log "OPTIONS /api/uploads/upload/ HTTP/1.1" 200 0
+ERROR 2026-03-26 14:49:20,713 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-26 14:49:20,764 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-26 14:49:30,052 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-26 14:49:30,062 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+WARNING 2026-03-26 14:49:32,801 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-26 14:49:32,812 log Not Found: /api/analysis/
+WARNING 2026-03-26 14:49:32,820 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-26 14:49:32,832 log Not Found: /ws/analysis/
+WARNING 2026-03-26 14:49:32,832 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-26 14:49:32,850 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-26 15:25:50,042 log "GET /admin/tutorials/tutorial/ HTTP/1.1" 200 19365
+INFO 2026-03-26 15:26:16,802 log "GET /admin/uploads/upload/add/ HTTP/1.1" 200 20663
+INFO 2026-03-26 15:26:17,274 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:27:06,068 log "POST /admin/uploads/upload/add/ HTTP/1.1" 302 0
+INFO 2026-03-26 15:27:06,541 log "GET /admin/uploads/upload/ HTTP/1.1" 200 23361
+INFO 2026-03-26 15:27:06,977 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:27:36,882 log "POST /admin/uploads/upload/ HTTP/1.1" 302 0
+INFO 2026-03-26 15:27:37,035 log "GET /admin/uploads/upload/ HTTP/1.1" 200 23283
+INFO 2026-03-26 15:27:37,441 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:27:37,739 log "GET /static/admin/img/icon-alert.svg HTTP/1.1" 200 684
+INFO 2026-03-26 15:28:05,486 log "POST /admin/uploads/upload/ HTTP/1.1" 200 16202
+INFO 2026-03-26 15:28:06,052 log "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2026-03-26 15:28:14,145 log "GET /admin/uploads/upload/ HTTP/1.1" 200 23158
+INFO 2026-03-26 15:28:29,426 log "POST /admin/uploads/upload/ HTTP/1.1" 200 16778
+INFO 2026-03-26 15:28:34,632 log "POST /admin/uploads/upload/ HTTP/1.1" 302 0
+INFO 2026-03-26 15:28:34,738 log "GET /admin/uploads/upload/ HTTP/1.1" 200 21060
+INFO 2026-03-26 15:28:35,192 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:28:51,280 log "POST /admin/uploads/upload/ HTTP/1.1" 200 16193
+INFO 2026-03-26 15:28:53,330 log "POST /admin/uploads/upload/ HTTP/1.1" 302 0
+INFO 2026-03-26 15:28:53,423 log "GET /admin/uploads/upload/ HTTP/1.1" 200 20627
+INFO 2026-03-26 15:28:53,819 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:29:07,186 log "GET /admin/feedback/feedback/ HTTP/1.1" 200 17765
+INFO 2026-03-26 15:29:07,628 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:29:33,240 log "GET /admin/ HTTP/1.1" 200 19407
+INFO 2026-03-26 15:29:33,985 log "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2026-03-26 15:30:14,741 log "GET /admin/yara_engine/yaramatch/add/ HTTP/1.1" 200 20492
+INFO 2026-03-26 15:30:15,611 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:30:30,192 log "GET /admin/yara_engine/ HTTP/1.1" 200 6156
+INFO 2026-03-26 15:30:32,693 log "GET /admin/yara_engine/yararule/add/ HTTP/1.1" 200 18299
+INFO 2026-03-26 15:30:33,049 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:32:32,930 log "POST /admin/yara_engine/yararule/add/ HTTP/1.1" 302 0
+INFO 2026-03-26 15:32:33,052 log "GET /admin/yara_engine/yararule/ HTTP/1.1" 200 18603
+INFO 2026-03-26 15:32:33,545 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-26 15:33:05,056 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2026-03-26 21:43:49,159 log "OPTIONS /api/users/profile/ HTTP/1.1" 200 0
+WARNING 2026-03-26 21:43:49,386 log Unauthorized: /api/users/profile/
+WARNING 2026-03-26 21:43:49,397 log "GET /api/users/profile/ HTTP/1.1" 401 172
+INFO 2026-03-26 21:44:58,120 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-26 21:45:01,732 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-26 21:45:02,205 log "GET /api/users/profile/ HTTP/1.1" 200 418
+INFO 2026-03-26 21:45:02,409 log "GET /api/users/profile/ HTTP/1.1" 200 418
+INFO 2026-03-26 21:45:02,645 log "OPTIONS /api/analysis/risk-trends/ HTTP/1.1" 200 0
+INFO 2026-03-26 21:45:02,941 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+WARNING 2026-03-26 21:45:03,080 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-26 21:45:03,082 log Not Found: /api/analysis/
+WARNING 2026-03-26 21:45:03,093 log Not Found: /ws/analysis/
+WARNING 2026-03-26 21:45:03,117 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-26 21:45:03,239 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-26 21:45:03,260 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-26 21:45:49,010 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+INFO 2026-03-26 21:45:49,259 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-26 21:46:32,385 log "OPTIONS /api/uploads/upload/ HTTP/1.1" 200 0
+ERROR 2026-03-26 21:46:32,472 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-26 21:46:32,515 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+WARNING 2026-03-26 21:47:20,559 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-26 21:47:20,571 log Not Found: /api/analysis/
+WARNING 2026-03-26 21:47:20,634 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-26 21:47:20,634 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-26 21:47:20,727 log Not Found: /ws/analysis/
+WARNING 2026-03-26 21:47:20,816 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-26 21:48:20,981 log "GET /api/users/profile/ HTTP/1.1" 200 418
+INFO 2026-03-26 21:48:21,170 log "GET /api/users/profile/ HTTP/1.1" 200 418
+WARNING 2026-03-26 21:48:21,428 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-26 21:48:21,443 log Not Found: /api/analysis/
+WARNING 2026-03-26 21:48:21,507 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-26 21:48:21,510 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-26 21:48:21,551 log Not Found: /ws/analysis/
+WARNING 2026-03-26 21:48:21,641 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-26 21:48:21,669 basehttp - Broken pipe from ('127.0.0.1', 51915)
+INFO 2026-03-26 22:12:47,499 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-26 22:13:04,671 log Not Found: /
+WARNING 2026-03-26 22:13:04,755 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-26 22:13:12,515 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-26 22:13:14,026 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4080
+INFO 2026-03-26 22:13:14,604 log "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-26 22:13:14,604 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-26 22:13:14,802 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-26 22:13:14,817 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-26 22:13:14,989 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-26 22:13:15,150 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-26 22:13:15,728 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:44:12,738 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-27 00:44:33,276 log Not Found: /
+WARNING 2026-03-27 00:44:33,292 log "GET / HTTP/1.1" 404 3547
+WARNING 2026-03-27 00:59:46,407 log Unauthorized: /api/uploads/upload/
+WARNING 2026-03-27 00:59:46,481 log "GET /api/uploads/upload/ HTTP/1.1" 401 3773
+INFO 2026-03-27 00:59:47,169 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,171 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,328 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,331 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,533 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,538 log "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,677 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,717 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:47,853 log "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:48,185 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:48,395 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2026-03-27 00:59:48,419 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2026-03-27 01:03:47,488 autoreload C:\capstone_project\backend\threat_intel\apps\cve\utils.py changed, reloading.
+INFO 2026-03-27 01:04:17,832 autoreload Watching for file changes with StatReloader
+INFO 2026-03-27 01:28:48,418 autoreload Watching for file changes with StatReloader
+INFO 2026-03-27 01:34:09,490 autoreload C:\capstone_project\backend\threat_intel\apps\cve\utils.py changed, reloading.
+INFO 2026-03-27 01:34:25,760 autoreload Watching for file changes with StatReloader
+INFO 2026-03-27 01:42:03,918 autoreload C:\capstone_project\backend\threat_intel\threat_intel\settings.py changed, reloading.
+INFO 2026-03-27 01:42:12,265 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-27 01:43:42,381 log Not Found: /
+WARNING 2026-03-27 01:43:42,455 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-27 01:43:56,005 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-27 01:43:56,747 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4080
+INFO 2026-03-27 01:44:24,066 log "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4252
+INFO 2026-03-27 01:45:15,654 log "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-27 01:45:15,842 log "GET /admin/ HTTP/1.1" 200 19783
+INFO 2026-03-27 01:45:16,388 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-27 01:45:16,694 log "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2026-03-27 01:45:16,696 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-27 01:45:16,884 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-27 01:46:23,566 log "OPTIONS /api/users/profile/ HTTP/1.1" 200 0
+WARNING 2026-03-27 01:46:23,798 log Unauthorized: /api/users/profile/
+WARNING 2026-03-27 01:46:23,869 log "GET /api/users/profile/ HTTP/1.1" 401 172
+INFO 2026-03-27 01:46:46,922 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-27 01:46:51,046 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-27 01:46:51,163 log "GET /api/users/profile/ HTTP/1.1" 200 418
+INFO 2026-03-27 01:46:51,367 log "OPTIONS /api/analysis/risk-trends/ HTTP/1.1" 200 0
+INFO 2026-03-27 01:46:51,518 log "GET /api/users/profile/ HTTP/1.1" 200 418
+WARNING 2026-03-27 01:46:51,569 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 01:46:51,608 log Not Found: /ws/analysis/
+WARNING 2026-03-27 01:46:51,655 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+INFO 2026-03-27 01:46:51,681 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+WARNING 2026-03-27 01:46:51,737 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-27 01:46:51,854 log Not Found: /api/analysis/
+WARNING 2026-03-27 01:46:52,004 log "GET /api/analysis/ HTTP/1.1" 404 3733
+INFO 2026-03-27 01:47:26,900 log "OPTIONS /api/uploads/upload/ HTTP/1.1" 200 0
+ERROR 2026-03-27 01:47:26,981 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-27 01:47:27,019 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-27 01:47:50,018 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-27 01:47:50,018 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+WARNING 2026-03-27 02:44:55,726 log Not Found: /ws/analysis/
+WARNING 2026-03-27 02:44:55,747 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-27 02:44:56,152 log Not Found: /ws/analysis/
+WARNING 2026-03-27 02:44:56,156 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-27 02:45:02,429 log Not Found: /api/analysis/
+WARNING 2026-03-27 02:45:02,459 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 02:45:02,461 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-27 02:45:02,473 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-27 02:45:07,983 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 02:45:07,990 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-27 02:45:08,068 log Not Found: /api/analysis/
+WARNING 2026-03-27 02:45:08,071 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-27 02:45:46,673 log Not Found: /ws/analysis/
+WARNING 2026-03-27 02:45:46,678 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-27 02:45:50,061 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 02:45:50,074 log Not Found: /api/analysis/
+WARNING 2026-03-27 02:45:50,450 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-27 02:45:50,457 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-27 02:45:52,563 log Not Found: /ws/analysis/
+WARNING 2026-03-27 02:45:52,570 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-27 02:45:52,572 basehttp - Broken pipe from ('127.0.0.1', 61800)
+WARNING 2026-03-27 02:45:54,060 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 02:45:54,064 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-27 02:45:54,102 log Not Found: /api/analysis/
+WARNING 2026-03-27 02:45:54,105 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-27 02:46:01,595 log Not Found: /ws/analysis/
+WARNING 2026-03-27 02:46:01,611 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 02:46:01,624 log Not Found: /api/analysis/
+WARNING 2026-03-27 02:46:01,635 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+WARNING 2026-03-27 02:46:01,727 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-27 02:46:01,965 log "GET /api/analysis/ HTTP/1.1" 404 3733
+INFO 2026-03-27 02:47:50,055 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+WARNING 2026-03-27 02:47:50,082 log Unauthorized: /api/tutorials/
+WARNING 2026-03-27 02:47:50,087 log "GET /api/tutorials/ HTTP/1.1" 401 172
+INFO 2026-03-27 02:48:24,206 log "POST /api/token/ HTTP/1.1" 200 489
+WARNING 2026-03-27 02:48:24,477 log Not Found: /api/analysis/
+WARNING 2026-03-27 02:48:24,486 log Not Found: /api/analysis/risk-trends/
+WARNING 2026-03-27 02:48:24,500 log Not Found: /ws/analysis/
+WARNING 2026-03-27 02:48:24,504 log "GET /api/analysis/ HTTP/1.1" 404 3733
+WARNING 2026-03-27 02:48:24,510 log "GET /api/analysis/risk-trends/ HTTP/1.1" 404 3769
+WARNING 2026-03-27 02:48:24,514 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-27 02:48:24,556 basehttp - Broken pipe from ('127.0.0.1', 62109)
+INFO 2026-03-27 02:48:29,834 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-27 02:57:40,925 autoreload C:\capstone_project\backend\threat_intel\apps\analysis\urls.py changed, reloading.
+INFO 2026-03-27 02:57:58,478 autoreload Watching for file changes with StatReloader
+INFO 2026-03-27 03:06:17,920 autoreload C:\capstone_project\backend\threat_intel\apps\analysis\views.py changed, reloading.
+INFO 2026-03-27 03:06:36,788 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-27 03:06:57,974 log Not Found: /
+WARNING 2026-03-27 03:06:58,023 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-27 03:07:36,539 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-27 03:07:37,022 log "GET /api/analysis/risk-trends/ HTTP/1.1" 200 129
+WARNING 2026-03-27 03:07:37,089 log Not Found: /ws/analysis/
+WARNING 2026-03-27 03:07:37,118 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-27 03:07:37,288 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-27 03:07:52,654 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-27 03:07:57,152 log "GET /api/analysis/risk-trends/ HTTP/1.1" 200 129
+INFO 2026-03-27 03:07:57,155 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-27 03:07:57,325 log Not Found: /ws/analysis/
+WARNING 2026-03-27 03:07:57,342 log "GET /ws/analysis/ HTTP/1.1" 404 3601

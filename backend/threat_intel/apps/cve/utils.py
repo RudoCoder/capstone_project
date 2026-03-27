@@ -1,28 +1,35 @@
 # apps/cve/utils.py
-
 import re
-from .models import CVE, CVEMatch
 
+def extract_cve_from_meta(metadata):
+    """
+    Extracts CVE IDs from YARA rule metadata dictionaries.
+    """
+    cve_pattern = r"CVE-\d{4}-\d{4,7}"
+    matches = []
 
-def match_cves(content, analysis):
-    matches_found = []
+    # YARA metadata is usually a dict. We convert it to string to scan it.
+    meta_str = str(metadata)
+    found = re.findall(cve_pattern, meta_str)
 
-    # Find CVE patterns in content
-    found_ids = re.findall(r"CVE-\d{4}-\d{4,7}", content)
+    # Return unique CVE IDs
+    return list(set(found))
 
-    for cve_id in found_ids:
-        try:
-            cve_obj = CVE.objects.get(cve_id=cve_id)
-
-            CVEMatch.objects.create(
-                analysis=analysis,
-                cve=cve_obj,
-                matched_text=cve_id
-            )
-
-            matches_found.append(cve_id)
-
-        except CVE.DoesNotExist:
-            continue
-
-    return matches_found
+def match_cves(file_path):
+    """
+    Scans the raw content of a file for CVE patterns.
+    """
+    matches = []
+    try:
+        with open(file_path, "r", errors="ignore") as f:
+            content = f.read()
+            cve_pattern = r"CVE-\d{4}-\d{4,7}"
+            found = re.findall(cve_pattern, content)
+            for cve in list(set(found)):
+                matches.append({
+                    "cve_id": cve,
+                    "severity": "High"
+                })
+    except Exception as e:
+        print(f"CVE scan error: {e}")
+    return matches

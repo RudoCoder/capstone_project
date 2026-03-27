@@ -1,28 +1,64 @@
-def handle_file_upload(upload_id, analysis_id):
-    analysis = AnalysisResult.objects.get(id=analysis_id)
-    analysis.status = "processing"
-    analysis.save()
+import os
+import yara
+from git import Repo
 
-    file_path = analysis.upload.file.path
+YARA_REPO_URL = "https://github.com/yara-rules/rules"
+LOCAL_REPO_PATH = "yara_rules_repo"
 
-    with open(file_path, 'r', errors='ignore') as f:
-        content = f.read()
 
-    # IOC Extraction
-    iocs = extract_iocs(content)
+def update_yara_rules():
+    """
+    Clone or update YARA rules repo
+    """
+    try:
+        if not os.path.exists(LOCAL_REPO_PATH):
+            Repo.clone_from(YARA_REPO_URL, LOCAL_REPO_PATH)
+        else:
+            repo = Repo(LOCAL_REPO_PATH)
+            repo.remotes.origin.pull()
+    except Exception as e:
+        print(f"YARA repo update error: {e}")
 
-    for ip in iocs["ips"]:
-        ioc_obj, _ = IOC.objects.get_or_create(type="ip", value=ip)
-        ExtractedIOC.objects.create(analysis=analysis, ioc=ioc_obj)
 
-    # YARA Scan
-    run_yara_scan(content, analysis)
+def compile_yara_rules():
+    """
+    Compile all YARA rules
+    """
+    rule_files = {}
 
-    # CVE Matching
-    match_cves(content, analysis)
+    for root, _, files in os.walk(LOCAL_REPO_PATH):
+        for file in files:
+            if file.endswith(".yar") or file.endswith(".yara"):
+                full_path = os.path.join(root, file)
+                rule_files[file] = full_path
 
-    # Risk Scoring
-    calculate_risk(analysis)
+    if not rule_files:
+        return None
 
-    analysis.status = "completed"
-    analysis.save()
+    return yara.compile(filepaths=rule_files)
+
+
+def scan_file_with_yara(file_path):
+    """
+    Scan file using compiled YARA rules
+    """
+    try:
+        rules = compile_yara_rules()
+        if not rules:
+            return []
+
+        matches = rules.match(file_path)
+
+        results = []
+        for match in matches:
+            results.append({
+                "rule": match.rule,
+                "tags": match.tags,
+                "meta": match.meta
+            })
+
+        return results
+
+    except Exception as e:
+        print(f"YARA scan error: {e}")
+        return []

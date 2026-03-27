@@ -12,3 +12,8 @@ uvicorn
 yara-python
 requests
 python-dotenv
+joblib
+scikit-learn
+numpy
+pandas
+gitpython

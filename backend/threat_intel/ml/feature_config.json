@@ -1,0 +1,11 @@
+{
+  "features": [
+    "file_size",
+    "ioc_count",
+    "yara_matches",
+    "ip_count",
+    "domain_count",
+    "hash_count",
+    "high_risk_rules"
+  ]
+}
