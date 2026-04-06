@@ -1,5 +1,4 @@
 # apps/analysis/models.py
-# apps/analysis/models.py
 
 from django.db import models
 from apps.uploads.models import Upload

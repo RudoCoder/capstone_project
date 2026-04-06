@@ -1,22 +1,73 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-// src/App.jsx
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import AppRoutes from "./routes";
+// Importing your pages with the correct file names from your 'ls' output
+import LoginPage from "./pages/LoginPage";
+import Dashboard from "./pages/Dashboard";
+import AnalysisPage from "./pages/AnalysisPage";
+import UploadPage from "./pages/UploadPage";
+import TutorialsPage from "./pages/TutorialsPage";
 
-export default function App() {
+/**
+ * ProtectedRoute Component
+ * This checks if a 'access_token' exists in localStorage.
+ * If not, it redirects the user to the login page.
+ */
+const ProtectedRoute = ({ children }) => {
+  const isAuthenticated = !!localStorage.getItem("access_token");
+  return isAuthenticated ? children : <Navigate to="/login" replace />;
+};
+
+function App() {
   return (
-    <div className="flex h-screen w-full bg-[#0b0f1a] overflow-hidden">
-      {/* 1. Sidebar on the left */}
-      <Sidebar />
+    <Router>
+      <Routes>
+        {/* Public Route */}
+        <Route path="/login" element={<LoginPage />} />
 
-      {/* 2. Content area on the right */}
-      <div className="flex-1 flex flex-col min-w-0 h-full">
-        <Navbar />
-        <main className="flex-1 overflow-y-auto p-6">
-          <AppRoutes />
-        </main>
-      </div>
-    </div>
+        {/* Protected Routes - Only accessible after successful Django login */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/analysis/:id"
+          element={
+            <ProtectedRoute>
+              <AnalysisPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/upload"
+          element={
+            <ProtectedRoute>
+              <UploadPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/tutorials"
+          element={
+            <ProtectedRoute>
+              <TutorialsPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Default Redirects */}
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;

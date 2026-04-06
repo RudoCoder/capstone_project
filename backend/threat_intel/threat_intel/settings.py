@@ -204,3 +204,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # --- Machine Learning Configuration ---
 ML_ROOT = os.path.join(BASE_DIR, 'ml')
 ML_MODEL_PATH = os.path.join(ML_ROOT, 'model.pkl')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

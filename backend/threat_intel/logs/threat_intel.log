@@ -438,3 +438,810 @@ INFO 2026-03-27 03:07:57,152 log "GET /api/analysis/risk-trends/ HTTP/1.1" 200 1
 INFO 2026-03-27 03:07:57,155 log "GET /api/analysis/ HTTP/1.1" 200 2
 WARNING 2026-03-27 03:07:57,325 log Not Found: /ws/analysis/
 WARNING 2026-03-27 03:07:57,342 log "GET /ws/analysis/ HTTP/1.1" 404 3601
+INFO 2026-03-30 21:51:25,997 autoreload Watching for file changes with StatReloader
+INFO 2026-03-30 21:56:01,296 autoreload Watching for file changes with StatReloader
+INFO 2026-03-30 22:04:33,880 autoreload Watching for file changes with StatReloader
+INFO 2026-03-30 22:24:29,382 autoreload Watching for file changes with StatReloader
+INFO 2026-03-30 23:53:44,918 autoreload Watching for file changes with StatReloader
+INFO 2026-03-30 23:57:59,406 autoreload C:\capstone_project\backend\threat_intel\apps\analysis\models.py changed, reloading.
+INFO 2026-03-30 23:58:11,354 autoreload Watching for file changes with StatReloader
+INFO 2026-03-31 00:01:14,747 autoreload C:\capstone_project\backend\threat_intel\apps\uploads\tasks.py changed, reloading.
+INFO 2026-03-31 00:01:23,775 autoreload Watching for file changes with StatReloader
+INFO 2026-03-31 00:03:06,846 autoreload C:\capstone_project\backend\threat_intel\apps\uploads\tasks.py changed, reloading.
+INFO 2026-03-31 00:03:22,072 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-31 00:03:36,044 log Not Found: /
+WARNING 2026-03-31 00:03:36,134 log "GET / HTTP/1.1" 404 3547
+WARNING 2026-03-31 00:03:38,560 log Not Found: /favicon.ico
+WARNING 2026-03-31 00:03:38,780 log "GET /favicon.ico HTTP/1.1" 404 3598
+INFO 2026-03-31 00:03:47,484 log "GET /admin/ HTTP/1.1" 200 19783
+INFO 2026-03-31 00:03:49,417 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-03-31 00:03:49,739 log "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-03-31 00:03:49,758 log "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-03-31 00:03:49,797 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-03-31 00:03:49,913 log "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-03-31 00:03:49,947 log "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-03-31 00:03:50,286 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+INFO 2026-03-31 00:03:50,315 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 978
+INFO 2026-03-31 00:03:50,321 log "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2026-03-31 00:03:50,359 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-03-31 00:05:49,236 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-31 00:05:52,537 log "POST /api/token/ HTTP/1.1" 200 489
+WARNING 2026-03-31 01:13:07,141 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:07,174 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:11,394 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:11,396 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:16,392 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:16,393 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:21,392 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:21,393 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:26,383 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:26,387 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:31,403 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:31,415 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:36,532 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:36,655 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:41,395 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:41,397 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:46,408 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:46,413 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:51,385 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:51,391 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:13:56,393 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:13:56,395 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:01,384 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:01,387 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:06,426 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:06,431 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:11,424 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:11,426 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:16,381 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:16,384 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:21,399 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:21,409 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:26,391 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:26,393 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:31,391 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:31,393 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:36,394 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:36,396 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:41,391 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:41,394 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:46,400 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:46,405 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:51,463 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:51,487 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:14:56,418 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:14:56,427 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:01,678 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:01,864 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:06,390 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:06,392 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:11,388 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:11,392 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:16,389 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:16,392 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:22,122 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:22,297 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:27,543 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:27,809 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:31,980 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:32,008 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:36,946 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:36,950 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:41,951 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:41,952 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:46,968 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:46,972 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:51,955 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:51,961 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:15:56,970 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:15:56,996 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:01,969 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:01,992 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:06,978 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:06,991 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:11,966 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:12,047 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:17,635 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:17,909 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:25,606 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:26,037 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:27,927 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:28,136 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:35,116 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:35,450 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:47,553 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:47,773 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:16:50,517 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:16:50,590 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 01:17:06,248 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 01:17:15,429 log "GET /admin/ HTTP/1.1" 200 19783
+INFO 2026-03-31 01:23:08,394 log "GET /admin/uploads/upload/add/ HTTP/1.1" 200 20663
+INFO 2026-03-31 01:23:08,697 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 01:23:09,893 log "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-03-31 01:23:09,897 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-03-31 01:23:09,898 log "GET /static/admin/css/forms.css HTTP/1.1" 200 8831
+INFO 2026-03-31 01:23:10,160 log "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-03-31 01:23:10,187 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-03-31 01:23:10,578 log "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-03-31 01:23:10,693 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-03-31 01:23:10,896 log "GET /static/admin/css/widgets.css HTTP/1.1" 200 11811
+INFO 2026-03-31 01:23:10,901 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-03-31 01:23:11,410 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-03-31 01:23:11,576 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-03-31 01:23:11,763 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+INFO 2026-03-31 01:23:11,831 log "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-03-31 01:23:43,100 log "POST /admin/uploads/upload/add/ HTTP/1.1" 200 21044
+INFO 2026-03-31 01:23:43,575 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 01:24:32,566 log "POST /admin/uploads/upload/add/ HTTP/1.1" 302 0
+INFO 2026-03-31 01:24:33,112 log "GET /admin/uploads/upload/ HTTP/1.1" 200 22683
+INFO 2026-03-31 01:24:33,790 log "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+INFO 2026-03-31 01:24:34,023 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 01:24:34,525 log "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2026-03-31 01:24:34,936 log "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-03-31 01:24:35,084 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+INFO 2026-03-31 01:24:35,789 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+WARNING 2026-03-31 01:25:14,315 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:14,332 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:18,952 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:18,954 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:21,831 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:21,849 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:22,076 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:22,229 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:24,230 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:24,232 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:26,953 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:26,956 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:29,228 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:29,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:31,959 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:31,964 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:34,229 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:34,231 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:36,959 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:36,964 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:39,231 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:39,233 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:41,990 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:42,006 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:44,800 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:44,802 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:46,957 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:46,960 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:49,231 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:49,233 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:51,955 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:51,956 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:54,229 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:54,233 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:56,947 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:56,950 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:25:59,248 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:25:59,250 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:01,960 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:01,961 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:05,496 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:05,502 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:06,962 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:06,963 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:09,227 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:09,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:11,959 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:11,961 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:14,228 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:14,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:16,955 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:16,959 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:19,227 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:19,232 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:22,235 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:22,453 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:26,958 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:26,960 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:31,972 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:31,975 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:37,236 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:37,237 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:42,230 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:42,236 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:26:54,116 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:26:54,125 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:10,860 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:11,509 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:12,777 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:12,908 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:15,543 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:15,567 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:16,950 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:16,952 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:19,330 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:19,332 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:22,147 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:22,174 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:24,224 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:24,225 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:26,957 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:26,967 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:29,238 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:29,241 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:31,948 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:31,951 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:34,290 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:34,295 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:37,228 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:37,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:39,276 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:39,280 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:42,235 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:42,238 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:44,234 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:44,237 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:48,963 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:48,999 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:50,796 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:50,902 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:51,976 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:51,980 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:54,898 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:54,902 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:56,959 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:56,963 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:27:59,238 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:27:59,241 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:01,957 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:01,960 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:07,592 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:08,267 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:12,182 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:12,225 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:13,050 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:13,056 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:14,227 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:14,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:16,955 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:16,958 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:19,234 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:19,237 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:21,963 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:21,964 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:24,221 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:24,225 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:26,956 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:26,957 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:30,021 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:30,024 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:32,234 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:32,236 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:34,227 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:34,228 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:40,360 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:40,365 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:44,228 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:44,238 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:28:49,328 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:28:49,352 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:29:56,099 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:29:56,184 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:30:54,031 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:30:54,035 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:31:53,236 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:31:53,239 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:32:53,324 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:32:53,406 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:33:53,234 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:33:53,237 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:34:53,236 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:34:53,243 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:35:53,266 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:35:53,270 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:36:53,225 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:36:53,228 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:38:02,196 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:38:02,782 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:38:58,605 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:38:58,829 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:39:59,596 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:39:59,705 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:40:19,630 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:40:19,640 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:40:56,662 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:40:57,325 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:41:59,500 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:41:59,618 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:42:53,219 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:42:53,219 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:43:53,230 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:43:53,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:44:53,352 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:44:53,356 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:45:53,230 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:45:53,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:46:53,254 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:46:53,292 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:47:53,247 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:47:53,266 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:48:53,255 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:48:53,255 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:49:56,297 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:49:56,299 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:50:53,241 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:50:53,241 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:51:54,324 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:51:54,329 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:53:06,553 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:53:06,556 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:54:01,950 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:54:01,951 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:54:53,320 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:54:53,322 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:55:53,230 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:55:53,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:56:53,236 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:56:53,236 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:57:53,237 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:57:53,239 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:58:53,282 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:58:53,286 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 01:59:54,498 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 01:59:54,498 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:00:53,236 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:00:53,272 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:01:06,331 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 02:01:09,070 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-31 02:01:09,634 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-31 02:01:09,923 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:10,153 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:13,988 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:18,999 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:23,996 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:28,995 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:34,062 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:39,294 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:44,243 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:49,560 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:01:53,231 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:01:53,234 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:01:53,999 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:01:59,004 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:04,697 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:09,028 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:14,019 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:19,149 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:24,238 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:30,476 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:42,499 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:44,251 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:49,813 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:02:53,249 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:02:53,249 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:02:54,235 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:02:59,230 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:04,253 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:10,017 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:14,004 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:18,991 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:24,011 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:29,005 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:34,000 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:03:38,468 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:03:38,472 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:03:39,021 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:03:42,229 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:03:42,232 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:03:44,248 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:03:47,245 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:03:47,250 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:03:53,029 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:03:53,073 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:03:53,097 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:03:57,293 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:03:57,296 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:03:57,975 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:03:59,219 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:02,223 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:02,226 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:04,229 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:07,240 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:07,240 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:10,519 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:12,259 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:12,261 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:14,242 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:17,244 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:17,244 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:19,238 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:22,229 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:22,229 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:24,521 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:27,236 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:27,238 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:30,123 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:32,524 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:32,529 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:34,349 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:37,229 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:37,256 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:39,275 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:04:53,228 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:04:53,228 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:04:53,271 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:05:53,341 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:05:53,356 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:05:53,679 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:06:30,740 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:06:34,020 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:06:39,269 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:06:44,350 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:06:49,247 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:06:53,229 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:06:53,231 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:06:54,237 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:06:59,388 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:04,237 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:12,070 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:14,239 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:19,241 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:24,231 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:29,357 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:07:34,183 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:07:53,241 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:07:53,244 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:07:53,278 log "GET /api/analysis/ HTTP/1.1" 200 2
+WARNING 2026-03-31 02:08:53,424 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:08:53,424 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:08:59,768 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:09:39,914 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:09:41,704 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:09:42,010 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+INFO 2026-03-31 02:09:42,293 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 02:09:44,027 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:09:44,058 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:09:47,286 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:09:47,291 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:09:52,226 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:09:52,228 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:10:23,015 log "OPTIONS /api/uploads/upload/ HTTP/1.1" 200 0
+ERROR 2026-03-31 02:10:23,167 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-31 02:10:23,167 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-31 02:10:34,297 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-31 02:10:34,299 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+ERROR 2026-03-31 02:10:53,489 log Internal Server Error: /api/uploads/upload/
+ERROR 2026-03-31 02:10:53,522 log "POST /api/uploads/upload/ HTTP/1.1" 500 50
+INFO 2026-03-31 02:14:04,598 autoreload C:\capstone_project\backend\threat_intel\threat_intel\settings.py changed, reloading.
+INFO 2026-03-31 02:14:52,354 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-31 02:15:20,710 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:15:20,714 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:15:53,242 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:15:53,242 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:16:53,233 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:16:53,249 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:17:53,243 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:17:53,259 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:18:53,300 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:18:53,321 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:19:53,289 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:19:53,421 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:20:53,227 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:20:53,243 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:21:09,431 autoreload C:\capstone_project\backend\threat_intel\apps\uploads\views.py changed, reloading.
+INFO 2026-03-31 02:21:23,038 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-31 02:21:53,289 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:21:53,356 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:22:26,794 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:22:27,020 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:22:27,138 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 02:22:27,606 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 02:22:38,841 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 02:22:38,854 log "GET /api/tutorials/ HTTP/1.1" 401 172
+WARNING 2026-03-31 02:22:39,506 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 02:22:39,770 log "GET /api/tutorials/ HTTP/1.1" 401 172
+WARNING 2026-03-31 02:22:53,238 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:22:53,244 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:23:02,948 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-31 02:23:04,829 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 02:23:07,902 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:23:08,138 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:23:08,184 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 02:23:08,512 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 02:23:11,519 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 02:23:11,523 log "GET /api/tutorials/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:23:11,618 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 02:23:11,672 log "GET /api/tutorials/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:23:19,792 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 02:23:20,233 log "GET /api/tutorials/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:23:20,605 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 02:23:20,723 log "GET /api/tutorials/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:23:45,056 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 02:23:47,801 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:23:47,816 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:23:48,024 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 02:23:48,346 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 02:23:53,245 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:23:53,245 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:24:55,490 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:24:55,503 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:26:04,316 autoreload C:\capstone_project\backend\threat_intel\apps\uploads\utils.py changed, reloading.
+INFO 2026-03-31 02:26:18,744 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-31 02:26:53,269 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:26:53,270 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:27:53,237 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:27:53,241 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:28:31,742 autoreload C:\capstone_project\backend\threat_intel\apps\uploads\views.py changed, reloading.
+INFO 2026-03-31 02:28:45,575 autoreload Watching for file changes with StatReloader
+INFO 2026-03-31 02:39:41,022 autoreload C:\capstone_project\backend\threat_intel\apps\uploads\views.py changed, reloading.
+INFO 2026-03-31 02:39:50,674 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-31 02:40:03,617 log Not Found: /
+WARNING 2026-03-31 02:40:03,628 log "GET / HTTP/1.1" 404 3547
+INFO 2026-03-31 02:40:14,080 log "GET /admin/ HTTP/1.1" 200 20147
+INFO 2026-03-31 02:40:17,911 log "GET /api/token HTTP/1.1" 301 0
+WARNING 2026-03-31 02:40:18,932 log Method Not Allowed: /api/token/
+WARNING 2026-03-31 02:40:19,035 log "GET /api/token/ HTTP/1.1" 405 7609
+INFO 2026-03-31 02:40:20,758 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-03-31 02:40:20,772 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-03-31 02:40:21,008 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-03-31 02:40:21,166 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-03-31 02:40:21,200 log "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-03-31 02:40:21,315 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-03-31 02:40:21,358 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-03-31 02:40:21,467 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-03-31 02:40:21,784 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-03-31 02:40:21,902 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-03-31 02:40:21,907 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-03-31 02:40:21,917 log "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-03-31 02:40:52,228 log "POST /api/token/ HTTP/1.1" 200 8059
+WARNING 2026-03-31 02:40:54,260 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:40:54,262 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:41:55,007 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:41:55,009 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:42:53,244 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:42:53,245 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:44:03,210 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:44:03,243 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:44:53,998 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:44:54,365 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:45:53,280 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:45:53,318 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:46:53,247 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:46:53,255 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:47:47,848 log Unauthorized: /api/uploads/upload/
+WARNING 2026-03-31 02:47:47,972 log "POST /api/uploads/upload/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:47:53,367 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:47:53,820 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:48:14,355 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 02:48:16,796 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:48:17,088 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 02:48:17,318 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:48:18,342 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 02:48:35,946 log Unauthorized: /api/uploads/upload/
+WARNING 2026-03-31 02:48:35,975 log "POST /api/uploads/upload/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:48:53,228 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:48:53,230 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 02:49:04,543 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 02:49:07,614 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:49:07,802 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 02:49:07,855 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 02:49:07,886 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 02:49:54,470 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:49:54,855 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:25,074 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:25,669 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:32,570 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:33,208 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:38,525 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:38,873 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:39,254 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:39,433 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:42,758 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:42,963 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:51,892 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:52,082 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:50:52,366 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:50:52,524 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:51:03,664 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:51:04,267 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:51:05,039 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:51:05,401 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:51:12,310 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:51:12,606 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:51:18,372 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:51:18,583 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 02:51:21,433 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 02:51:21,473 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:14:12,651 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:14:13,265 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:14:57,078 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:14:57,391 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 09:15:44,032 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-31 09:15:44,309 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+WARNING 2026-03-31 09:15:44,509 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:15:44,820 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 09:15:45,323 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:15:45,475 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 09:15:47,661 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:15:47,764 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:16:48,067 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:16:48,405 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:17:47,953 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:17:48,290 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:18:49,736 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:18:49,992 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 09:19:01,515 log "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-03-31 09:19:07,029 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 09:19:09,665 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:19:10,394 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+INFO 2026-03-31 09:19:10,558 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:19:10,629 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:19:10,836 log "GET /api/tutorials/ HTTP/1.1" 200 525
+WARNING 2026-03-31 09:19:50,235 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:19:50,284 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:20:47,244 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:20:47,253 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:21:47,261 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:21:47,277 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:22:47,377 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:22:47,380 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:23:49,123 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:23:49,127 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:24:48,512 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:24:48,854 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:25:49,401 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:25:50,020 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:26:48,465 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:26:49,150 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:27:53,206 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:27:54,127 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:28:47,311 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:28:47,343 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:29:47,323 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:29:47,343 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:30:47,247 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:30:47,251 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:31:47,279 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:31:47,285 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:32:47,938 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:32:48,099 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:33:47,433 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:33:47,462 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:34:04,797 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:34:04,996 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 09:34:08,217 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:34:08,701 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:34:09,282 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:34:13,421 log "GET /admin/uploads/upload/ HTTP/1.1" 200 23836
+WARNING 2026-03-31 09:34:17,832 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:34:17,866 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:34:18,052 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:34:18,071 log "GET /api/analysis/ HTTP/1.1" 401 58
+WARNING 2026-03-31 09:34:18,200 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 09:34:18,272 log "GET /api/analysis/ HTTP/1.1" 401 58
+INFO 2026-03-31 09:34:31,879 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:34:31,989 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:34:32,186 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:34:32,375 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:34:44,971 log "GET /admin/uploads/upload/?uploaded_at__gte=2026-03-24+00%3A00%3A00%2B00%3A00&uploaded_at__lt=2026-04-01+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 26212
+INFO 2026-03-31 09:34:45,511 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:34:54,970 log "GET /admin/uploads/upload/?uploaded_at__gte=2026-03-31+00%3A00%3A00%2B00%3A00&uploaded_at__lt=2026-04-01+00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 22549
+INFO 2026-03-31 09:34:55,681 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:35:44,408 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:35:44,806 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:35:44,923 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:35:45,031 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:36:07,295 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:36:07,354 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 09:36:07,471 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:36:07,546 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 09:43:14,262 log "GET /admin/users/customuser/add/ HTTP/1.1" 200 35309
+INFO 2026-03-31 09:43:15,098 log "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19698
+INFO 2026-03-31 09:43:15,398 log "GET /static/admin/js/calendar.js HTTP/1.1" 200 9159
+INFO 2026-03-31 09:43:15,520 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:43:17,495 log "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1112
+INFO 2026-03-31 09:43:17,496 log "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 805
+INFO 2026-03-31 09:43:48,756 log "GET /admin/auth/group/add/?_to_field=id&_popup=1 HTTP/1.1" 200 11439
+INFO 2026-03-31 09:43:50,500 log "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2026-03-31 09:43:50,503 log "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 16428
+INFO 2026-03-31 09:43:50,688 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:43:52,279 log "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 2387
+INFO 2026-03-31 09:45:36,600 log "POST /admin/auth/group/add/?_to_field=id&_popup=1 HTTP/1.1" 200 11679
+INFO 2026-03-31 09:45:37,231 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:45:56,198 log "POST /admin/auth/group/add/?_to_field=id&_popup=1 HTTP/1.1" 200 325
+INFO 2026-03-31 09:45:57,073 log "GET /static/admin/js/popup_response.js HTTP/1.1" 200 532
+INFO 2026-03-31 09:48:32,072 log "POST /admin/users/customuser/add/ HTTP/1.1" 200 35699
+INFO 2026-03-31 09:48:32,458 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:48:54,278 log "POST /admin/users/customuser/add/ HTTP/1.1" 302 0
+INFO 2026-03-31 09:48:54,432 log "GET /admin/users/customuser/ HTTP/1.1" 200 20006
+INFO 2026-03-31 09:48:55,220 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:49:12,192 log "GET /admin/users/customuser/?role__exact=admin HTTP/1.1" 200 18329
+INFO 2026-03-31 09:49:12,366 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:49:17,301 log "GET /admin/users/customuser/?role__exact=user HTTP/1.1" 200 20172
+INFO 2026-03-31 09:49:17,712 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:49:24,528 log "GET /admin/users/customuser/1/change/?_changelist_filters=role__exact%3Duser HTTP/1.1" 200 35881
+INFO 2026-03-31 09:49:25,199 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:49:49,073 log "POST /admin/users/customuser/1/change/?_changelist_filters=role__exact%3Duser HTTP/1.1" 302 0
+INFO 2026-03-31 09:49:49,305 log "GET /admin/users/customuser/?role__exact=user HTTP/1.1" 200 20017
+INFO 2026-03-31 09:49:49,581 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:49:55,814 log "GET /admin/users/customuser/?role__exact=admin HTTP/1.1" 200 19809
+INFO 2026-03-31 09:49:56,159 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:50:01,339 log "GET /admin/users/customuser/?role__exact=analyst HTTP/1.1" 200 18335
+INFO 2026-03-31 09:50:01,784 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:50:04,330 log "GET /admin/users/customuser/?role__exact=user HTTP/1.1" 200 19818
+INFO 2026-03-31 09:50:05,005 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:50:12,653 log "GET /admin/users/customuser/?role__exact=admin HTTP/1.1" 200 19809
+INFO 2026-03-31 09:50:13,012 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:50:18,493 log "GET /admin/users/customuser/1/change/?_changelist_filters=role__exact%3Dadmin HTTP/1.1" 200 35884
+INFO 2026-03-31 09:50:19,080 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:50:56,974 log "POST /admin/users/customuser/1/change/?_changelist_filters=role__exact%3Dadmin HTTP/1.1" 302 0
+INFO 2026-03-31 09:50:57,158 log "GET /admin/users/customuser/?role__exact=admin HTTP/1.1" 200 20021
+INFO 2026-03-31 09:50:57,988 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 09:51:22,782 log "GET /admin/ HTTP/1.1" 200 20164
+WARNING 2026-03-31 09:52:14,584 log Unauthorized: /api/token/
+WARNING 2026-03-31 09:52:14,584 log "POST /api/token/ HTTP/1.1" 401 63
+INFO 2026-03-31 10:03:18,365 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 10:03:20,335 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 10:03:20,887 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 10:03:20,948 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 10:03:20,990 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 10:03:54,037 log "GET /admin/users/ HTTP/1.1" 200 5437
+INFO 2026-03-31 10:03:58,835 log "GET /admin/users/customuser/ HTTP/1.1" 200 20203
+INFO 2026-03-31 10:03:59,519 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-31 10:04:35,734 log "GET /admin/ HTTP/1.1" 200 20164
+INFO 2026-03-31 10:52:30,322 log "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-03-31 10:52:32,681 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 10:52:32,832 log "GET /api/analysis/ HTTP/1.1" 200 2
+INFO 2026-03-31 10:52:32,974 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 10:52:33,004 log "GET /api/tutorials/ HTTP/1.1" 200 525
+INFO 2026-03-31 11:24:36,122 log "GET /admin/ HTTP/1.1" 200 20164
+INFO 2026-03-31 13:36:17,358 log "GET /admin/ HTTP/1.1" 200 20164
+INFO 2026-03-31 13:36:22,138 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-31 13:36:22,279 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-31 13:36:22,440 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+INFO 2026-03-31 13:36:22,497 log "OPTIONS /api/tutorials/ HTTP/1.1" 200 0
+WARNING 2026-03-31 13:36:22,671 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 13:36:22,884 log "GET /api/tutorials/ HTTP/1.1" 401 172
+WARNING 2026-03-31 13:36:23,201 log Unauthorized: /api/tutorials/
+WARNING 2026-03-31 13:36:23,422 log "GET /api/tutorials/ HTTP/1.1" 401 172
+WARNING 2026-03-31 13:36:42,818 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 13:36:42,822 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 13:36:42,862 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 13:36:42,901 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 13:36:57,758 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 13:36:57,799 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 13:36:58,281 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 13:36:58,311 log "GET /api/analysis/ HTTP/1.1" 401 172
+INFO 2026-03-31 14:03:09,303 log "GET /admin/ HTTP/1.1" 200 20164
+WARNING 2026-03-31 14:03:16,487 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 14:03:16,509 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 14:03:17,012 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 14:03:17,110 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 14:03:28,420 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 14:03:28,654 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 14:03:29,000 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 14:03:29,149 log "GET /api/analysis/ HTTP/1.1" 401 172
+INFO 2026-03-31 15:32:18,086 log "GET /admin/ HTTP/1.1" 200 20164
+WARNING 2026-03-31 15:32:35,156 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 15:32:35,430 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 15:32:36,319 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 15:32:36,665 log "GET /api/analysis/ HTTP/1.1" 401 172
+INFO 2026-03-31 16:00:56,151 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+INFO 2026-03-31 16:00:56,150 log "OPTIONS /api/analysis/ HTTP/1.1" 200 0
+WARNING 2026-03-31 16:00:56,720 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 16:00:56,825 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 16:00:57,608 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 16:00:57,883 log "GET /api/analysis/ HTTP/1.1" 401 172
+INFO 2026-03-31 16:01:29,391 log "GET /admin/ HTTP/1.1" 200 20164
+WARNING 2026-03-31 16:01:33,097 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 16:01:33,721 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 16:01:34,587 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 16:01:35,092 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 16:02:58,200 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 16:02:58,216 log "GET /api/analysis/ HTTP/1.1" 401 172
+WARNING 2026-03-31 16:02:58,406 log Unauthorized: /api/analysis/
+WARNING 2026-03-31 16:02:58,442 log "GET /api/analysis/ HTTP/1.1" 401 172
+INFO 2026-04-06 23:02:16,252 log "GET /admin/ HTTP/1.1" 200 20164
+INFO 2026-04-06 23:02:28,270 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2026-04-06 23:02:29,054 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-06 23:02:29,054 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-06 23:02:29,430 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-06 23:02:29,920 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-04-06 23:02:30,317 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-06 23:02:30,725 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
