@@ -28,7 +28,7 @@ def match_cves(file_path):
             for cve in list(set(found)):
                 matches.append({
                     "cve_id": cve,
-                    "severity": "High"
+                    "severity": 7.5  # default CVSS score until enriched from NVD
                 })
     except Exception as e:
         print(f"CVE scan error: {e}")

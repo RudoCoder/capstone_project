@@ -12,7 +12,7 @@ class TutorialListView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        tutorials = Tutorial.objects.all().order_by("-created_at")
+        tutorials = Tutorial.objects.all()
         serializer = TutorialSerializer(tutorials, many=True)
         return Response(serializer.data)
 

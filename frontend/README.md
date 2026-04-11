@@ -107,3 +107,11 @@ frontend/
 ├── tailwind.config.js           # Customizing the "SOC" color palette
 └── README.md
 ```
+# Go to frontend
+cd frontend
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev

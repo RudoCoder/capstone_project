@@ -8,8 +8,13 @@ export default function UploadForm() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await API.post("uploads/upload/", formData);
-    alert("Analysis ID: " + res.data.analysis_id);
+    try {
+      const res = await API.post("uploads/upload/", formData);
+      alert("Analysis ID: " + res.data.analysis_id);
+    } catch (err) {
+      console.error(err.response?.data || err.message);
+      alert("Upload failed: " + JSON.stringify(err.response?.data || err.message));
+    }
   };
 
   return (

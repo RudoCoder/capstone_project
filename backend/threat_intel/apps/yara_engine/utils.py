@@ -3,7 +3,9 @@ import yara
 from git import Repo
 
 YARA_REPO_URL = "https://github.com/yara-rules/rules"
-LOCAL_REPO_PATH = "yara_rules_repo"
+# Absolute path: always resolves to threat_intel/yara_rules_repo/ regardless of cwd
+LOCAL_REPO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "yara_rules_repo")
+LOCAL_REPO_PATH = os.path.normpath(LOCAL_REPO_PATH)
 
 
 def update_yara_rules():
@@ -22,43 +24,47 @@ def update_yara_rules():
 
 def compile_yara_rules():
     """
-    Compile all YARA rules
+    Compile YARA rules one file at a time, skipping any that fail to compile.
+    Returns a list of compiled rule objects (one per valid file).
     """
-    rule_files = {}
+    compiled = []
 
     for root, _, files in os.walk(LOCAL_REPO_PATH):
         for file in files:
             if file.endswith(".yar") or file.endswith(".yara"):
                 full_path = os.path.join(root, file)
-                rule_files[file] = full_path
+                try:
+                    rules = yara.compile(filepath=full_path)
+                    compiled.append(rules)
+                except yara.SyntaxError as e:
+                    print(f"[YARA] Skipping {file} — syntax error: {e}")
+                except Exception as e:
+                    print(f"[YARA] Skipping {file} — error: {e}")
 
-    if not rule_files:
-        return None
-
-    return yara.compile(filepaths=rule_files)
+    return compiled
 
 
 def scan_file_with_yara(file_path):
     """
-    Scan file using compiled YARA rules
+    Scan file against all compiled YARA rules.
     """
-    try:
-        rules = compile_yara_rules()
-        if not rules:
-            return []
+    compiled_rules = compile_yara_rules()
 
-        matches = rules.match(file_path)
-
-        results = []
-        for match in matches:
-            results.append({
-                "rule": match.rule,
-                "tags": match.tags,
-                "meta": match.meta
-            })
-
-        return results
-
-    except Exception as e:
-        print(f"YARA scan error: {e}")
+    if not compiled_rules:
+        print("[YARA] No rules compiled — skipping scan.")
         return []
+
+    results = []
+    for rules in compiled_rules:
+        try:
+            matches = rules.match(file_path)
+            for match in matches:
+                results.append({
+                    "rule": match.rule,
+                    "tags": match.tags,
+                    "meta": match.meta,
+                })
+        except Exception as e:
+            print(f"[YARA] Match error: {e}")
+
+    return results

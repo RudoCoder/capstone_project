@@ -28,7 +28,8 @@ class UploadFileView(APIView):
             upload = Upload.objects.create(
                 user=request.user,
                 file=file,
-                file_name=file.name
+                file_name=file.name,
+                file_type=file.content_type or "application/octet-stream",
             )
 
             # 2. Reset pointer and calculate hash using the file object
@@ -44,9 +45,7 @@ class UploadFileView(APIView):
                 status="pending"
             )
 
-            # 4. Run processing synchronously (No Redis needed)
-            # Ensure the pointer is at the start before processing
-            upload.file.seek(0)
+            # 4. Run processing synchronously (no Redis needed in dev)
             process_file(upload.id, analysis.id)
 
             return Response(

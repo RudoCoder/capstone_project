@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // Importing your pages with the correct file names from your 'ls' output
 import LoginPage from "./pages/LoginPage";
@@ -20,6 +21,7 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
   return (
+    <ThemeProvider>
     <Router>
       <Routes>
         {/* Public Route */}
@@ -67,6 +69,7 @@ function App() {
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
+    </ThemeProvider>
   );
 }
 

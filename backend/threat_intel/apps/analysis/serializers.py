@@ -14,6 +14,7 @@ class AnalysisResultSerializer(serializers.ModelSerializer):
     risk_details = RiskScoreDetailSerializer(
         source="riskscoredetail_set", many=True, read_only=True
     )
+    file_name = serializers.CharField(source="upload.file_name", read_only=True)
 
     class Meta:
         model = AnalysisResult

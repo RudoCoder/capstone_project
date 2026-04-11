@@ -4,7 +4,7 @@ import { loginUser } from "../api/authService";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [token, setToken] = useState(localStorage.getItem("access_token"));
   const [isAuthenticated, setIsAuthenticated] = useState(!!token);
 
   useEffect(() => {
@@ -15,14 +15,17 @@ export const AuthProvider = ({ children }) => {
     const res = await loginUser(credentials);
 
     const access = res.data.access;
-    localStorage.setItem("token", access);
+    const refresh = res.data.refresh;
+    localStorage.setItem("access_token", access);
+    if (refresh) localStorage.setItem("refresh_token", refresh);
 
     setToken(access);
     setIsAuthenticated(true);
   };
 
   const logout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
     setToken(null);
     setIsAuthenticated(false);
   };
