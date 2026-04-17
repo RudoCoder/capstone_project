@@ -8,6 +8,7 @@ class Tutorial(models.Model):
     TUTORIAL_TYPES = [
         ("document", "Google Drive Document"),
         ("video", "YouTube Video"),
+        ("website", "External Website"),
     ]
 
     title = models.CharField(max_length=255)

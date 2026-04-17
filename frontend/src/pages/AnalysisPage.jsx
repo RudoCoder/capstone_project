@@ -80,8 +80,8 @@ export default function AnalysisPage() {
     );
 
     const riskScore  = analysis.risk_score || 0;
-    const riskColor  = riskScore >= 70 ? C.red : riskScore >= 40 ? C.orange : C.green;
-    const riskLabel  = riskScore >= 70 ? 'Critical' : riskScore >= 40 ? 'Medium' : 'Low';
+    const riskColor  = riskScore >= 75 ? C.red : riskScore >= 50 ? C.orange : riskScore >= 25 ? C.yellow : C.green;
+    const riskLabel  = riskScore >= 75 ? 'Critical' : riskScore >= 50 ? 'High' : riskScore >= 25 ? 'Medium' : 'Low';
     const statusOk   = analysis.status === 'completed';
     const circumference = 2 * Math.PI * 54;
     const dash = circumference - (riskScore / 100) * circumference;

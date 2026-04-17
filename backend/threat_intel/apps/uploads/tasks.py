@@ -8,6 +8,29 @@ from apps.ioc.models import IOC, ExtractedIOC
 from apps.yara_engine.models import YaraRule, YaraMatch
 from apps.cve.models import CVE, CVEMatch
 
+# Rule names that only match generic patterns (IP addresses, domains, URLs, etc.)
+# and carry no malware-specific signal on their own.
+_GENERIC_RULE_NAMES = {"domain", "ip", "url", "email", "hash", "network", "dns"}
+
+_MALWARE_KEYWORDS = {
+    "malware", "exploit", "trojan", "rat", "backdoor",
+    "ransomware", "rootkit", "virus", "spyware", "adware", "apt",
+    "worm", "keylogger", "botnet", "dropper", "downloader",
+}
+
+
+def _is_high_signal(match):
+    """Return True only if the YARA match name or tags suggest actual malware."""
+    name = match["rule"].lower()
+    tags = [t.lower() for t in (match.get("tags") or [])]
+    if name in _GENERIC_RULE_NAMES:
+        return False
+    if any(kw in name for kw in _MALWARE_KEYWORDS):
+        return True
+    if any(kw in tag for tag in tags for kw in _MALWARE_KEYWORDS):
+        return True
+    return False
+
 
 def process_file(upload_id, analysis_id):
     upload = Upload.objects.get(id=upload_id)
@@ -39,9 +62,15 @@ def process_file(upload_id, analysis_id):
 
         # Step 2: YARA scan against rules repo
         yara_matches = scan_file_with_yara(file_path)
-        yara_count = len(yara_matches)
 
-        # Save YARA matches to DB
+        # Separate high-signal matches (actual malware rules) from generic
+        # pattern rules (e.g. "domain", "IP") which fire on almost any text
+        # file and would otherwise inflate the risk score.
+        high_signal_matches = [m for m in yara_matches if _is_high_signal(m)]
+        yara_count = len(yara_matches)           # total — stored in summary
+        high_signal_count = len(high_signal_matches)  # used for ML scoring
+
+        # Save ALL YARA matches to DB so the user can see them
         for match in yara_matches:
             rule_obj, _ = YaraRule.objects.get_or_create(
                 name=match["rule"],
@@ -64,20 +93,22 @@ def process_file(upload_id, analysis_id):
             )
             CVEMatch.objects.get_or_create(analysis=analysis, cve=cve_obj)
 
-        # Step 4: ML risk scoring
+        # Step 4: ML risk scoring — only high-signal YARA hits count
         features = {
             "file_size": upload.file.size,
             "ioc_count": ioc_count,
-            "yara_matches": yara_count,
+            "yara_matches": high_signal_count,
             "cve_matches": cve_count,
         }
         ml_result = predict_threat(features)
         risk_score = round(ml_result["confidence"] * 100, 2)
 
         # Map score to threat level
-        if risk_score >= 70:
+        if risk_score >= 75:
             threat_level = "critical"
-        elif risk_score >= 40:
+        elif risk_score >= 50:
+            threat_level = "high"
+        elif risk_score >= 25:
             threat_level = "medium"
         else:
             threat_level = "low"

@@ -32,3 +32,9 @@ class UserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = "__all__"
         read_only_fields = ["password"]
+
+
+class ProfileUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ["username", "email", "organization", "role"]

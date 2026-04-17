@@ -8,3 +8,6 @@ export const getAnalysisById = (id) =>
 
 export const getRiskTrends = () =>
   API.get("analysis/risk-trends/");
+
+export const getMLInsights = () =>
+  API.get("analysis/ml-insights/");

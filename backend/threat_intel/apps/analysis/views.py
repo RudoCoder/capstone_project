@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import RetrieveAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated
+from django.db.models import Count, Avg
 from .models import AnalysisResult
 from .serializers import AnalysisResultSerializer
 
@@ -33,7 +34,61 @@ class RiskTrendView(APIView):
         ]
         return Response(data)
 
-# 4. Existing Upload View (Check if this is in apps/uploads/views.py or here)
+# 4. ML Insights — aggregate feature data per analysis
+class MLInsightsView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        analyses = (
+            AnalysisResult.objects
+            .annotate(
+                ioc_count=Count("extractedioc", distinct=True),
+                yara_count=Count("yaramatch", distinct=True),
+                cve_count=Count("cvematch", distinct=True),
+            )
+            .order_by("-created_at")
+        )
+
+        total = analyses.count()
+        avg_risk = analyses.aggregate(a=Avg("risk_score"))["a"] or 0
+
+        threat_distribution = {
+            "low":      analyses.filter(risk_score__lt=25).count(),
+            "medium":   analyses.filter(risk_score__gte=25, risk_score__lt=50).count(),
+            "high":     analyses.filter(risk_score__gte=50, risk_score__lt=75).count(),
+            "critical": analyses.filter(risk_score__gte=75).count(),
+        }
+
+        per_scan = [
+            {
+                "id":           a.id,
+                "file_name":    a.upload.file_name if hasattr(a.upload, "file_name") else f"Scan #{a.id}",
+                "risk_score":   a.risk_score,
+                "threat_level": a.threat_level,
+                "ioc_count":    a.ioc_count,
+                "yara_count":   a.yara_count,
+                "cve_count":    a.cve_count,
+                "created_at":   a.created_at,
+            }
+            for a in analyses[:20]
+        ]
+
+        avg_ioc  = sum(s["ioc_count"]  for s in per_scan) / max(len(per_scan), 1)
+        avg_yara = sum(s["yara_count"] for s in per_scan) / max(len(per_scan), 1)
+        avg_cve  = sum(s["cve_count"]  for s in per_scan) / max(len(per_scan), 1)
+
+        return Response({
+            "total_scans":          total,
+            "avg_risk_score":       round(avg_risk, 1),
+            "avg_ioc_count":        round(avg_ioc, 1),
+            "avg_yara_count":       round(avg_yara, 1),
+            "avg_cve_count":        round(avg_cve, 1),
+            "threat_distribution":  threat_distribution,
+            "per_scan":             per_scan,
+        })
+
+
+# 5. Existing Upload View (Check if this is in apps/uploads/views.py or here)
 # If it's here, keep it; if it's in uploads, you can remove it from this file.
 class UploadView(APIView):
     permission_classes = [IsAuthenticated]

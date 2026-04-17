@@ -9,14 +9,15 @@ import {
 import {
     Shield, AlertTriangle, CheckCircle, FileSearch,
     UploadCloud, BookOpen, LayoutDashboard, LogOut,
-    TrendingUp, Activity, ExternalLink, Clock, Cpu, Palette, MessageSquare,
+    TrendingUp, Activity, ExternalLink, Clock, Cpu, Palette, MessageSquare, User,
 } from 'lucide-react';
 import { useTheme, THEMES } from '../context/ThemeContext';
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const riskColor = (score, C) => {
-    if (score >= 70) return C.red;
-    if (score >= 40) return C.orange;
+    if (score >= 75) return C.red;
+    if (score >= 50) return C.orange;
+    if (score >= 25) return C.yellow;
     return C.green;
 };
 
@@ -169,17 +170,19 @@ const Dashboard = () => {
     }, []);
 
     const total    = results.length;
-    const critical = results.filter(r => r.risk_score >= 70).length;
-    const medium   = results.filter(r => r.risk_score >= 40 && r.risk_score < 70).length;
-    const clean    = results.filter(r => r.risk_score < 40).length;
+    const critical = results.filter(r => r.risk_score >= 75).length;
+    const high     = results.filter(r => r.risk_score >= 50 && r.risk_score < 75).length;
+    const medium   = results.filter(r => r.risk_score >= 25 && r.risk_score < 50).length;
+    const clean    = results.filter(r => r.risk_score < 25).length;
     const avgRisk  = total ? Math.round(results.reduce((a, b) => a + (b.risk_score || 0), 0) / total) : 0;
 
     const chartData  = [...results].slice(0, 10).reverse();
-    const PIE_COLORS = [C.red, C.orange, C.green];
+    const PIE_COLORS = [C.red, C.orange, C.yellow, C.green];
     const pieData    = [
         { name: 'Critical', value: critical },
+        { name: 'High',     value: high     },
         { name: 'Medium',   value: medium   },
-        { name: 'Clean',    value: clean    },
+        { name: 'Low',      value: clean    },
     ].filter(d => d.value > 0);
 
     const isLight    = C.key === 'light';
@@ -233,9 +236,10 @@ const Dashboard = () => {
                     <NavItem to="/tutorials" icon={BookOpen}        label="Tutorials"    active={false} C={C} />
 
                     <p style={{ margin: '20px 0 8px 8px', fontSize: 11, color: C.textMuted, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Insights</p>
-                    <NavItem to="/dashboard"  icon={Activity}       label="Activity Log" active={false} C={C} />
-                    <NavItem to="/dashboard"  icon={Cpu}            label="ML Analysis"  active={false} C={C} />
-                    <NavItem to="/feedback"   icon={MessageSquare}  label="Feedback"     active={false} C={C} />
+                    <NavItem to="/activity-log" icon={Activity}       label="Activity Log" active={false} C={C} />
+                    <NavItem to="/ml-analysis"  icon={Cpu}            label="ML Analysis"  active={false} C={C} />
+                    <NavItem to="/feedback"     icon={MessageSquare}  label="Feedback"     active={false} C={C} />
+                    <NavItem to="/profile"      icon={User}           label="My Profile"   active={false} C={C} />
 
                     <div style={{ flex: 1 }} />
 
@@ -304,11 +308,12 @@ const Dashboard = () => {
                     </div>
 
                     {/* Stat cards */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 24 }}>
-                        <StatCard icon={FileSearch}    label="Total Scans"  value={total}    sub="all time"    accent={C.accent} C={C} />
-                        <StatCard icon={AlertTriangle} label="Critical"     value={critical} sub="score ≥ 70"  accent={C.red}    C={C} />
-                        <StatCard icon={TrendingUp}    label="Medium Risk"  value={medium}   sub="score 40–69" accent={C.orange} C={C} />
-                        <StatCard icon={CheckCircle}   label="Clean Files"  value={clean}    sub="score < 40"  accent={C.green}  C={C} />
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16, marginBottom: 24 }}>
+                        <StatCard icon={FileSearch}    label="Total Scans"  value={total}    sub="all time"    accent={C.accent}  C={C} />
+                        <StatCard icon={AlertTriangle} label="Critical"     value={critical} sub="score ≥ 75"  accent={C.red}     C={C} />
+                        <StatCard icon={TrendingUp}    label="High Risk"    value={high}     sub="score 50–74" accent={C.orange}  C={C} />
+                        <StatCard icon={TrendingUp}    label="Medium Risk"  value={medium}   sub="score 25–49" accent={C.yellow}  C={C} />
+                        <StatCard icon={CheckCircle}   label="Low / Clean"  value={clean}    sub="score < 25"  accent={C.green}   C={C} />
                     </div>
 
                     {/* Charts row */}

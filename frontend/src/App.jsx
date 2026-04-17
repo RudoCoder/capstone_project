@@ -4,10 +4,15 @@ import { ThemeProvider } from "./context/ThemeContext";
 
 // Importing your pages with the correct file names from your 'ls' output
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 import Dashboard from "./pages/Dashboard";
 import AnalysisPage from "./pages/AnalysisPage";
 import UploadPage from "./pages/UploadPage";
 import TutorialsPage from "./pages/TutorialsPage";
+import FeedbackPage from "./pages/FeedbackPage";
+import ActivityLogPage from "./pages/ActivityLogPage";
+import ProfilePage from "./pages/ProfilePage";
+import MLAnalysisPage from "./pages/MLAnalysisPage";
 
 /**
  * ProtectedRoute Component
@@ -24,8 +29,9 @@ function App() {
     <ThemeProvider>
     <Router>
       <Routes>
-        {/* Public Route */}
-        <Route path="/login" element={<LoginPage />} />
+        {/* Public Routes */}
+        <Route path="/login"    element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
         {/* Protected Routes - Only accessible after successful Django login */}
         <Route
@@ -60,6 +66,42 @@ function App() {
           element={
             <ProtectedRoute>
               <TutorialsPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/feedback"
+          element={
+            <ProtectedRoute>
+              <FeedbackPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/activity-log"
+          element={
+            <ProtectedRoute>
+              <ActivityLogPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/ml-analysis"
+          element={
+            <ProtectedRoute>
+              <MLAnalysisPage />
             </ProtectedRoute>
           }
         />

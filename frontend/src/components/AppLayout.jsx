@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import {
     Shield, LayoutDashboard, UploadCloud, BookOpen,
-    Activity, Cpu, LogOut, Palette,
+    Activity, Cpu, LogOut, Palette, User, MessageSquare,
 } from 'lucide-react';
 import { useTheme, THEMES } from '../context/ThemeContext';
 import { useState } from 'react';
@@ -70,8 +70,10 @@ export default function AppLayout({ children }) {
         { to: '/tutorials', icon: BookOpen,        label: 'Tutorials' },
     ];
     const insights = [
-        { to: '/dashboard', icon: Activity, label: 'Activity Log' },
-        { to: '/dashboard', icon: Cpu,      label: 'ML Analysis' },
+        { to: '/activity-log', icon: Activity,       label: 'Activity Log' },
+        { to: '/ml-analysis',  icon: Cpu,            label: 'ML Analysis'  },
+        { to: '/feedback',     icon: MessageSquare,  label: 'Feedback'     },
+        { to: '/profile',      icon: User,           label: 'My Profile'   },
     ];
 
     const isActive = (path) => location.pathname === path;
