@@ -1,28 +1,35 @@
 from celery import shared_task
-# We use the correct name from your previous error message
 from .utils import scan_file_with_yara
 from apps.analysis.models import AnalysisResult
+from apps.yara_engine.models import YaraRule, YaraMatch
+
 
 @shared_task
 def process_yara_scan(analysis_id):
     """
-    Background task to run YARA rule matching against an uploaded file.
+    Background Celery task to run YARA rule matching against an uploaded file.
+    (Not used in the synchronous dev flow — kept for future async use.)
     """
     try:
-        # 1. Fetch the analysis object using the ID passed to the task
-        analysis = AnalysisResult.objects.get(id=analysis_id)
+        analysis  = AnalysisResult.objects.get(id=analysis_id)
         file_path = analysis.upload.file.path
 
-        # 2. Run the scan using the correct utility function name
-        # Note: If your util only takes file_path, remove 'analysis' from arguments
         yara_matches = scan_file_with_yara(file_path)
 
-        # 3. Update risk score if matches are found
-        if yara_matches:
-            analysis.risk_score += 30
-            analysis.save()
+        for match in yara_matches:
+            rule_obj, _ = YaraRule.objects.get_or_create(
+                name=match["rule"],
+                defaults={
+                    "description": str(match.get("meta", "")),
+                    "rule_text": "",
+                }
+            )
+            YaraMatch.objects.get_or_create(analysis=analysis, rule=rule_obj)
 
-        return f"YARA Scan complete for Analysis {analysis_id}. Matches found: {len(yara_matches)}"
+        return (
+            f"YARA scan complete for Analysis {analysis_id}. "
+            f"Matches: {len(yara_matches)}"
+        )
 
     except AnalysisResult.DoesNotExist:
         return f"Error: Analysis {analysis_id} not found."

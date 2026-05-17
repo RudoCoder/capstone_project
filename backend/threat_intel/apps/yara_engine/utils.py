@@ -1,51 +1,55 @@
 import os
 import yara
-from git import Repo
 
-YARA_REPO_URL = "https://github.com/yara-rules/rules"
-# Absolute path: always resolves to threat_intel/yara_rules_repo/ regardless of cwd
-LOCAL_REPO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "yara_rules_repo")
-LOCAL_REPO_PATH = os.path.normpath(LOCAL_REPO_PATH)
+# ── Path Resolution ────────────────────────────────────────────────────────────
+# Resolves to: backend/threat_intel/yara_rules_repo/
+# Place your cloned YARA rules repo there and name it "yara_rules_repo".
+# Structure: yara_rules_repo/antidebug_antivm/, yara_rules_repo/cve_rules/, etc.
+_BACKEND_ROOT = os.path.normpath(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..")
+)
+LOCAL_REPO_PATH = os.path.join(_BACKEND_ROOT, "yara_rules_repo")
 
-# Cache compiled rules for the lifetime of the process — recompiling on every
-# scan is extremely slow (walks the entire repo each time).
+# Process-lifetime cache — recompiling on every scan is extremely slow
 _compiled_rules_cache = None
 
 
-def update_yara_rules():
-    """
-    Clone or update YARA rules repo and invalidate the rule cache.
-    """
+def invalidate_cache():
+    """Call this after updating the rules repo to force a recompile."""
     global _compiled_rules_cache
-    try:
-        if not os.path.exists(LOCAL_REPO_PATH):
-            Repo.clone_from(YARA_REPO_URL, LOCAL_REPO_PATH)
-        else:
-            repo = Repo(LOCAL_REPO_PATH)
-            repo.remotes.origin.pull()
-        _compiled_rules_cache = None  # force recompile after update
-    except Exception as e:
-        print(f"YARA repo update error: {e}")
+    _compiled_rules_cache = None
 
 
 def compile_yara_rules():
     """
-    Compile YARA rules one file at a time, skipping any that fail to compile.
-    Returns a list of compiled rule objects (one per valid file).
+    Walk LOCAL_REPO_PATH, compile each .yar/.yara file individually,
+    skip any files that fail (missing modules, syntax errors, etc.).
+    Returns a list of compiled yara.Rules objects.
     Result is cached for the lifetime of the process.
     """
     global _compiled_rules_cache
     if _compiled_rules_cache is not None:
         return _compiled_rules_cache
 
+    if not os.path.exists(LOCAL_REPO_PATH):
+        print(
+            f"[YARA] WARNING: Rules directory not found at {LOCAL_REPO_PATH}. "
+            "Unzip rules.zip into backend/threat_intel/ and rename the folder "
+            "to 'yara_rules_repo', then restart the server."
+        )
+        _compiled_rules_cache = []
+        return []
+
     compiled = []
-    skipped = 0
+    skipped  = 0
 
     for root, _, files in os.walk(LOCAL_REPO_PATH):
-        for file in files:
-            if not (file.endswith(".yar") or file.endswith(".yara")):
+        if ".git" in root:          # skip git internals
+            continue
+        for filename in files:
+            if not (filename.endswith(".yar") or filename.endswith(".yara")):
                 continue
-            full_path = os.path.join(root, file)
+            full_path = os.path.join(root, filename)
             try:
                 rules = yara.compile(filepath=full_path)
                 compiled.append(rules)
@@ -54,31 +58,41 @@ def compile_yara_rules():
             except Exception:
                 skipped += 1
 
-    print(f"[YARA] Compiled {len(compiled)} rule files, skipped {skipped} (missing modules or syntax errors).")
+    print(
+        f"[YARA] Compiled {len(compiled)} rule files, "
+        f"skipped {skipped} (syntax errors / missing modules)."
+    )
     _compiled_rules_cache = compiled
     return compiled
 
 
 def scan_file_with_yara(file_path):
     """
-    Scan file against all compiled YARA rules.
+    Scan a file against all compiled YARA rules.
+    Returns a list of dicts: {rule, tags, meta}.
     """
     compiled_rules = compile_yara_rules()
 
     if not compiled_rules:
-        print("[YARA] No rules compiled — skipping scan.")
+        print("[YARA] No compiled rules available — skipping scan.")
+        return []
+
+    if not os.path.exists(file_path):
+        print(f"[YARA] File not found for scanning: {file_path}")
         return []
 
     results = []
     for rules in compiled_rules:
         try:
-            matches = rules.match(file_path)
+            matches = rules.match(file_path, timeout=10)
             for match in matches:
                 results.append({
                     "rule": match.rule,
-                    "tags": match.tags,
-                    "meta": match.meta,
+                    "tags": list(match.tags),
+                    "meta": dict(match.meta),
                 })
+        except yara.TimeoutError:
+            pass
         except Exception as e:
             print(f"[YARA] Match error: {e}")
 

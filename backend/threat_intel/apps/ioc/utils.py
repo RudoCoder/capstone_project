@@ -1,15 +1,18 @@
+# apps/ioc/utils.py
+# NOTE: The primary IOC extraction used by the pipeline is in apps/uploads/utils.py.
+# This file keeps a minimal version for the IOCExtractionView endpoint.
 import re
 
+
 def extract_iocs(content):
+    """
+    Extract IPs and URLs from a raw text string.
+    Used by the manual extraction API endpoint.
+    """
     if not content:
         return {"ips": [], "urls": []}
 
-    # Regex for IPv4
-    ip_pattern = r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b'
-    # Simple regex for URLs
-    url_pattern = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-
-    ips = list(set(re.findall(ip_pattern, content)))
-    urls = list(set(re.findall(url_pattern, content)))
+    ips  = list(set(re.findall(r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b", content)))
+    urls = list(set(re.findall(r"https?://[^\s\"'<>]{4,}", content)))
 
     return {"ips": ips, "urls": urls}

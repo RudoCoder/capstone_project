@@ -1,28 +1,43 @@
 from celery import shared_task
 from .utils import match_cves
-# Ensure you import your AnalysisResult model to update the score
 from apps.analysis.models import AnalysisResult
+from apps.cve.models import CVE, CVEMatch
+
 
 @shared_task
-def run_cve_analysis(analysis_id, content):
+def run_cve_analysis(analysis_id, file_path):
     """
-    This task is called by the main upload pipeline.
-    It takes the analysis_id and the file content to find matches.
+    Background Celery task to run CVE matching against an uploaded file.
+    Takes analysis_id and the real filesystem file_path (not raw content).
+    (Not used in the synchronous dev flow — kept for future async use.)
     """
     try:
-        # 1. Fetch the existing analysis record from the database
         analysis = AnalysisResult.objects.get(id=analysis_id)
 
-        # 2. Run your CVE matching logic
-        cve_matches = match_cves(content, analysis)
+        # FIX: was incorrectly called as match_cves(content, analysis)
+        # Correct signature is match_cves(file_path) — one argument only.
+        cve_matches = match_cves(file_path)
 
-        # 3. Increase risk if CVEs are found
+        for cve_data in cve_matches:
+            cve_obj, _ = CVE.objects.get_or_create(
+                cve_id=cve_data["cve_id"],
+                defaults={
+                    "description": cve_data.get("description", ""),
+                    "severity":    cve_data.get("severity", 0.0),
+                }
+            )
+            CVEMatch.objects.get_or_create(analysis=analysis, cve=cve_obj)
+
         if cve_matches:
             analysis.risk_score += 20
-            analysis.verdict = "Malicious" # Optional: auto-flag if CVEs exist
             analysis.save()
 
-        return f"CVE Analysis complete for {analysis_id}. Matches: {len(cve_matches)}"
+        return (
+            f"CVE analysis complete for {analysis_id}. "
+            f"Matches: {len(cve_matches)}"
+        )
 
     except AnalysisResult.DoesNotExist:
         return f"Error: Analysis {analysis_id} not found."
+    except Exception as e:
+        return f"CVE Task Error: {str(e)}"
