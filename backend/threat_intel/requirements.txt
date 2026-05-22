@@ -1,4 +1,4 @@
-Django>=6.0.3
+Django>=6.0.5
 djangorestframework
 djangorestframework-simplejwt
 psycopg2-binary
@@ -17,3 +17,5 @@ scikit-learn
 numpy
 pandas
 gitpython
+gevent
+Pillow
