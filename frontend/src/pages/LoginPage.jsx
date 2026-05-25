@@ -83,7 +83,7 @@ export default function LoginPage() {
 
                     {/* feature pills */}
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 36, justifyContent: 'center', zIndex: 1 }}>
-                        {['YARA Engine', 'CVE Matching', 'IOC Extraction', 'ML Scoring'].map(f => (
+                        {['YARA Engine', 'CVE Matching', 'IOC Extraction', 'CVSS Scoring'].map(f => (
                             <span key={f} style={{
                                 background: `${C.accent}18`, border: `1px solid ${C.accent}44`,
                                 color: C.accent, fontSize: 12, fontWeight: 600,
