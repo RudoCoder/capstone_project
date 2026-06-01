@@ -10,7 +10,7 @@ const ANALYSIS_STEPS = [
     { icon: Search,   label: 'IOC Extraction',  detail: 'Scanning for IPs, domains, URLs…' },
     { icon: Shield,   label: 'YARA Scanning',   detail: 'Matching community rule sets…' },
     { icon: BookOpen, label: 'CVE Matching',     detail: 'Cross-referencing vulnerability DB…' },
-    { icon: Brain,    label: 'ML Risk Scoring',  detail: 'Running predictive model…' },
+    { icon: Brain,    label: 'CVSS Risk Scoring',  detail: 'Running predictive model…' },
 ];
 
 export default function UploadPage() {
